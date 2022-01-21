@@ -23,6 +23,7 @@ public class _4_Classes {
     private static void createApiClasses(ProjectInfo info) throws IOException {
         Map<String, String> replaces = new HashMap<>(1);
         replaces.put("${{projectPkg}}", info.getProjectPkg());
+        replaces.put("${{projectName}}", info.getProjectName());
         replaces.put("${{groupId}}", info.getGroupId());
         //
         copyFile("/classes/ExampleApi.java",
@@ -53,6 +54,7 @@ public class _4_Classes {
         Map<String, String> replaces = new HashMap<>(2);
         replaces.put("${{projectPkg}}", info.getProjectPkg());
         replaces.put("${{groupId}}", info.getGroupId());
+        replaces.put("${{projectName}}", info.getProjectName());
         replaces.put("${{upperProjectName}}", upperProjectName);
         //
         copyFile("/classes/R.java",
